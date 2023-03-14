@@ -1,56 +1,49 @@
 ---
-bio: My research interests include distributed robotics, mobile computing and programmable
-  matter.
+bio: 
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
+  - course: MBA
+    institution: University of Saint Mary
+    year: 2022
+  - course: PhD in Statistics
+    institution: Oklahoma State University
+    year: 2013
+  - course: MS in Statistics
+    institution: Oklahoma State University
+    year: 2005
+  - course: BS in Mathematics
+    institution: University of Kansas
+    year: 2000
 email: ""
-first_name: Alice
+first_name: Janae
+last_name: Nicholson
 highlight_name: true
 interests:
-- Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
-last_name: Wu
+- Statistics
+- Machine Learning
+- Machine Learning Interpretability
 organizations:
-- name: Stanford University
-  url: https://www.stanford.edu/
-role: Professor of Artificial Intelligence
+- name: Optiv Security
+  url: https://www.optiv.com/
+role: Data Science Lead
 social:
 - icon: envelope
   icon_pack: fas
   link: /#contact
 - display:
     header: true
-  icon: twitter
-  icon_pack: fab
-  label: Follow me on Twitter
-  link: https://twitter.com/GeorgeCushen
-- icon: graduation-cap
-  icon_pack: fas
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/jenicholson
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/
+  link: https://www.linkedin.com/in/janae-nicholson-ph-d-mba-8a920336/
 - icon: cv
   icon_pack: ai
   link: uploads/resume.pdf
-status:
-  icon: ☕️
 superuser: true
-title: Alice Wu 吳恩達
+title: Janae Nicholson, Ph.D., MBA
 ---
 
-Alice Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Janae Nicholson is a Data Science leader that specializes in project management and growing future Data Scientists.  She is skilled in Agile Project Management.  Her experience includes 19+ years in Statistics, programming, and Data Science.
 {style="text-align: justify;"}

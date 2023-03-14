@@ -1,5 +1,5 @@
 ---
-date: "2022-10-24"
+date: "2023-03-13"
 sections:
 - block: about.avatar
   content:
@@ -9,18 +9,18 @@ sections:
 - block: features
   content:
     items:
-    - description: 90%
+    - description: 
       icon: r-project
       icon_pack: fab
       name: R
-    - description: 100%
+    - description: 
       icon: chart-line
       icon_pack: fas
       name: Statistics
-    - description: 10%
-      icon: camera-retro
-      icon_pack: fas
-      name: Photography
+    - description: 
+      icon: python
+      icon_pack: fab
+      name: Python
     title: Skills
 - block: experience
   content:
@@ -56,7 +56,7 @@ sections:
     items:
     - certificate_url: https://www.coursera.org
       date_end: ""
-      date_start: "2021-01-25"
+      date_start: "2020-02-26"
       description: ""
       organization: Coursera
       organization_url: https://www.coursera.org
