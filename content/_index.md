@@ -1,7 +1,7 @@
 ---
 date: "2023-03-13"
 sections:
-- block: about.avatar
+- block: v1/about
   content:
     text: null
     username: admin
