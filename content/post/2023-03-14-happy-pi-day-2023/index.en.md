@@ -21,15 +21,14 @@ projects: []
 
 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(collapse = TRUE)
-```
+
 
 Pi day is celebrated on March 14 every year.  This is because the numerical value of pi is 3.14.  Please enjoy my favorite pie chart made with R.
 
 
 
-```{r pie, fig.cap='A fancy pie chart.', tidy=FALSE}
+
+```r
 par(mar = c(0, 1, 0, 1))
 pie(
   c(280, 60, 20),
@@ -38,3 +37,8 @@ pie(
   init.angle = -50, border = NA
 )
 ```
+
+<div class="figure">
+<img src="{{< blogdown/postref >}}index.en_files/figure-html/pie-1.png" alt="A fancy pie chart." width="672" />
+<p class="caption">Figure 1: A fancy pie chart.</p>
+</div>

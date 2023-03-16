@@ -129,8 +129,8 @@ sections:
     buttons:
     - name: All
       tag: '*'
-    - name: Deep Learning
-      tag: Deep Learning
+    - name: Plotting
+      tag: plotting
     - name: Other
       tag: Demo
     default_button_index: 0
@@ -148,7 +148,7 @@ sections:
     filters:
       folders:
       - event
-    title: Recent & Upcoming Talks
+    title: Talks
   design:
     columns: "2"
     view: compact

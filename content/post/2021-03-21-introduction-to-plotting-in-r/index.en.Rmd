@@ -1,0 +1,142 @@
+---
+title: Introduction-to-plotting-in-R
+author: Janae Nicholson
+date: '2021-03-21'
+slug: introduction-to-plotting-in-r
+categories:
+  - R
+tags:
+  - ggplot2
+  - plotting
+subtitle: 'An Introduction to `qplot()` in the `ggplot2` package '
+summary: 'This blog post shows how to do simple plots in R using the `qplot()` function in the `ggplot2` package.'
+authors: []
+lastmod: '2021-03-21T20:35:19-05:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: ["plotting-in-R"]
+---
+
+The ggplot2 package is an advanced graphics package that implements the grammar of graphics. There are two main functions in the package.  The first is `qplot()`.  This function is for making a quick plot.  It tends to guess as to what you want and may not give you exactly what you want.  The function `ggplot()` gives greater control of the plot at the cost of having to specify every detail.
+
+
+See [docs.ggplot2.org/current/](docs.ggplot2.org/current/) for more details.
+
+Let's start by loading the packages `ggplot` and `RColorBrewer`.  We will begin with the diamonds data set available in the `ggplot2` package.
+
+```{r loading, echo=TRUE, message=FALSE}
+library(ggplot2)
+library(RColorBrewer)  #Color palettes for plotting
+str(diamonds)
+
+```
+
+Notice that our data set has 53,940 rows and 10 columns.  There are numeric columns such as carat, an integer column of price, and ordered factors such as cut which are categorical.  
+
+## A Quick Bar Chart
+```{r barchart}
+qplot(cut, data=diamonds, fill=cut, 
+      main="Bar Chart of Diamond Cut")
+
+```
+
+## A Stacked Bar Chart
+```{r stacked}
+qplot(cut, data=diamonds, fill=clarity, geom="bar", 
+      main="Bar Chart of Diamond Cut and Clarity")
+```
+
+## A Histogram 
+Note fill sets the color inside the bar, colour sets the boundary color.  By default 30 bins are used and you get a message if you don't set the bin width.
+
+```{r hist1}
+qplot(price, data=diamonds, geom="histogram", 
+      main="Histogram of Diamond Prices", 
+      fill=I("cornflowerblue"), colour = I("black"))
+```
+
+## A Density Plot
+```{r}
+qplot(price, data=diamonds, geom="density", fill=cut, 
+      main="Density of Price by Cut")
+```
+
+## A Density Plot with the Colors Changed
+The `ggplot2` package works with the `RColorBrewer` to provide additional palettes for plotting.
+
+```{r}
+qplot(price, data=diamonds, geom="density", fill=color, 
+      main="Density of Price by Color") +
+  scale_fill_brewer(palette="Spectral")
+```
+
+## A Box Plot
+```{r}
+qplot(cut, price, data=diamonds, geom="boxplot", fill=cut, 
+      main="Price by Cut")
+```
+
+## Take a Sample
+The number of rows in the full data set is 53,940.  If you try to do a scatter plot of this many data points most of the points will be hidden.  Let's take a sample to make the plot look better.  Remember always set a seed when doing something random.
+
+```{r sampleit}
+set.seed(12345)
+dsamp <- diamonds[sample(nrow(diamonds), 1000), ]
+```
+
+## A Scatter Plot
+```{r}
+(q1 <- qplot(carat, price, data=dsamp, colour=clarity, 
+             main="Carat vs Price for Sample of Diamonds"))
+```
+
+## Refine the Plot
+Notice that I saved the `ggplot` object.  This allows me to change some of the layers in the plot and refine the final output as I go.
+```{r}
+q1 + scale_colour_brewer()
+```
+
+Now try specifying the color palette.
+```{r}
+q1 + scale_colour_brewer(palette="Paired")
+```
+
+## Plot Linear Regressions
+We can add linear regressions to the scatter plot. Here I regress carat on price for each clarity.
+```{r}
+qplot(carat, price, data=dsamp, geom=c("point", "smooth"),
+      colour=clarity,
+      main="Regression of Price on Carat for each Clarity")
+```
+
+## Multiple Plots on the Page
+```{r}
+qplot(carat, price, data=dsamp, colour=clarity, facets=~cut)
+```
+
+# Time series Plots
+Plotting of time series is common in statistics and comes up many times when discussing plotting.  Here are some examples using some familiar R data sets.
+
+Using the airquality R data set look at ozone over time.  First I need to create a date to plot over.
+```{r}
+air <- airquality
+air$NewDate <- as.Date(paste(air$Month,air$Day,"1973", sep="/"), "%m/%d/%Y")
+qplot(NewDate, Ozone, data=subset(air, !is.na(Ozone)), geom="line", 
+      main="Ozone over Time")
+```
+
+Another example using economics data in ggplot2 package
+```{r}
+qplot(date, unemploy, data=economics, geom="path", 
+      main="Unemployment over Time", ylab="Unemployment (Thousands)")
+
+```
+
+The above plots used R data frames with a date and measurement variable.  It is also possible to plot R time series objects.
+```{r}
+str(AirPassengers)
+qplot(time(AirPassengers), AirPassengers, geom="line", main="Monthly International Airline Passengers")
+```
