@@ -45,5 +45,5 @@ superuser: true
 title: Janae Nicholson, Ph.D., MBA
 ---
 
-Janae Nicholson is a Data Science leader that specializes in project management and growing future Data Scientists.  She is skilled in Agile Project Management.  Her experience includes 19+ years in Statistics, programming, and Data Science.
+Janae Nicholson is a Data Science leader that specializes in project management and growing future Data Scientists.  Her experience includes 20+ years in Statistics, programming, and Data Science.
 {style="text-align: justify;"}
