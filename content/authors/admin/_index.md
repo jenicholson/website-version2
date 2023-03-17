@@ -40,7 +40,7 @@ social:
   link: https://www.linkedin.com/in/janae-nicholson-ph-d-mba-8a920336/
 - icon: cv
   icon_pack: ai
-  link: uploads/resume.pdf
+  link: uploads/Janae_Resume_Website_2023.pdf
 superuser: true
 title: Janae Nicholson, Ph.D., MBA
 ---
