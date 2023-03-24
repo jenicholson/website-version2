@@ -37,3 +37,8 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# suggested by blogdown
+.DS_Store 
+Thumbs.db 
+.hugo_build.lock

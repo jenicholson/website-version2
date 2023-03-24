@@ -11,6 +11,8 @@ blogdown::config_Rprofile()
 
 blogdown::serve_site()
 
+blogdown::check_site()
+
 blogdown::build_site()
 
 blogdown::stop_server()
